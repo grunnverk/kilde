@@ -1,0 +1,91 @@
+{
+  "name": "@eldrforge/kilde",
+  "version": "0.1.0-dev.0",
+  "description": "Universal Git Automation Tool - AI-powered commit and release messages for any git repository",
+  "main": "dist/main.js",
+  "type": "module",
+  "bin": {
+    "kilde": "./dist/main.js",
+    "kilde-mcp": "./dist/mcp-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grunnverk/kilde.git"
+  },
+  "scripts": {
+    "build": "npm run lint && tsc --noEmit && vite build && node scripts/build-mcp.js && copyfiles -u 1 \"src/**/*.md\" dist && chmod 755 ./dist/main.js 2>/dev/null || chmod 755 ./dist/kilde/src/main.js",
+    "start": "dist/main.js",
+    "dev": "vite",
+    "watch": "vite build --watch",
+    "test": "NODE_OPTIONS='--max-old-space-size=4096' vitest run --coverage",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "clean": "rm -rf dist",
+    "precommit": "npm run build && npm run lint && npm run test && npm run mcp:test",
+    "prepublishOnly": "npm run lint && npm run build && npm run test",
+    "mcp:build": "vite build && chmod 755 ./dist/mcp-server.js 2>/dev/null || true",
+    "mcp:inspect": "mcp-inspector npx -y @modelcontextprotocol/server-kilde",
+    "mcp:test": "node scripts/test-mcp-compliance.js",
+    "mcp:dev": "vite build --watch",
+    "docs:dev": "cd website && vite",
+    "docs:build": "cd website && vite build",
+    "docs:preview": "cd website && vite preview"
+  },
+  "keywords": [
+    "git",
+    "genai",
+    "commit",
+    "release",
+    "changelog",
+    "automation",
+    "language-agnostic"
+  ],
+  "author": "Tim O'Brien <tobrien@discursive.com>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@eldrforge/ai-service": "^1.0.1",
+    "@eldrforge/commands-git": "^1.0.0",
+    "@eldrforge/core": "^1.0.0",
+    "@eldrforge/git-tools": "^1.0.1",
+    "@eldrforge/shared": "^0.1.11",
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "@riotprompt/riotprompt": "^0.0.21",
+    "commander": "^14.0.0",
+    "dotenv": "^17.2.1",
+    "js-yaml": "^4.1.0",
+    "winston": "^3.17.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
+    "@modelcontextprotocol/inspector": "^0.18.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@swc/core": "^1.15.10",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/coverage-v8": "^4.0.13",
+    "copyfiles": "^2.4.1",
+    "eslint": "^9.33.0",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.3.0",
+    "mockdate": "^3.0.5",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "rollup-plugin-preserve-shebang": "^1.0.1",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "typescript": "^5.9.2",
+    "vite": "^7.3.1",
+    "vite-plugin-node": "^7.0.0",
+    "vitest": "^4.0.13"
+  }
+}

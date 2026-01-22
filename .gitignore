@@ -1,0 +1,26 @@
+*~
+agentic-*.md
+.env
+dist
+temp-dist
+node_modules
+*.log
+.vscode
+coverage/
+input/
+output/
+processed/
+.kilde-test-cache.json
+RELEASE_NOTES.md
+RELEASE_TITLE.md
+tsconfig.tsbuildinfo
+
+# Kilde link backup files
+.kilde-link-backup.json
+
+# Git hooks (environment-specific)
+.git/hooks/pre-commit
+
+# Fallback commit message files (should go to output/ directory)
+commit-message-*.txt
+package-lock.json
