@@ -188,11 +188,11 @@ All prerequisites complete. Ready for final validation and npm publish.
 - No GitHub API dependencies (works with any git host)
 
 ### Package Reuse
-- `@eldrforge/commands-git` - Git commit command
-- `@eldrforge/core` - Core types and utilities
-- `@eldrforge/ai-service` - AI integration
-- `@eldrforge/git-tools` - Git operations
-- `@eldrforge/shared` - Shared utilities
+- `@grunnverk/commands-git` - Git commit command
+- `@grunnverk/core` - Core types and utilities
+- `@grunnverk/ai-service` - AI integration
+- `@grunnverk/git-tools` - Git operations
+- `@grunnverk/shared` - Shared utilities
 
 ### Build System
 - Vite for fast builds

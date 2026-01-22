@@ -64,7 +64,7 @@
 
 ### Package Configuration
 - [x] `package.json` metadata correct
-  - [x] Name: `@eldrforge/kilde`
+  - [x] Name: `@grunnverk/kilde`
   - [x] Version: `0.1.0-dev.0` (update to `0.1.0` for release)
   - [x] Description accurate
   - [x] Repository URL correct
@@ -102,7 +102,7 @@
 - [ ] Build: `npm run build`
 - [ ] Test: `npm test`
 - [ ] Pack: `npm pack` and inspect contents
-- [ ] Test pack install: `npm install -g eldrforge-kilde-0.1.0.tgz`
+- [ ] Test pack install: `npm install -g grunnverk-kilde-0.1.0.tgz`
 - [ ] Verify CLI works: `kilde --version`
 - [ ] Verify MCP works: `kilde-mcp` responds
 
@@ -118,9 +118,9 @@
 ### NPM Publishing
 - [ ] Verify NPM login: `npm whoami`
 - [ ] Publish: `npm publish --access public`
-- [ ] Verify on npmjs.com: https://www.npmjs.com/package/@eldrforge/kilde
-- [ ] Test global install: `npm install -g @eldrforge/kilde`
-- [ ] Test npx: `npx @eldrforge/kilde --version`
+- [ ] Verify on npmjs.com: https://www.npmjs.com/package/@grunnverk/kilde
+- [ ] Test global install: `npm install -g @grunnverk/kilde`
+- [ ] Test npx: `npx @grunnverk/kilde --version`
 
 ### GitHub Release
 - [ ] GitHub Release created automatically (via workflow)
@@ -143,7 +143,7 @@ If critical issues are discovered:
 
 1. **NPM Deprecation**
    ```bash
-   npm deprecate @eldrforge/kilde@0.1.0 "Critical bug found, use 0.1.1"
+   npm deprecate @grunnverk/kilde@0.1.0 "Critical bug found, use 0.1.1"
    ```
 
 2. **Publish Patch**
@@ -179,4 +179,4 @@ Release is successful when:
 
 - Package maintainer: Tim O'Brien (@tobrien)
 - GitHub org: grunnverk
-- NPM org: @eldrforge
+- NPM org: @grunnverk

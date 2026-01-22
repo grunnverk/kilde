@@ -2,7 +2,7 @@
 
 > **Universal Git Automation Tool** - AI-powered commit and release messages for any git repository
 
-[![npm version](https://badge.fury.io/js/@eldrforge%2Fkilde.svg)](https://www.npmjs.com/package/@eldrforge/kilde)
+[![npm version](https://badge.fury.io/js/@grunnverk%2Fkilde.svg)](https://www.npmjs.com/package/@grunnverk/kilde)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D24.0.0-brightgreen.svg)](https://nodejs.org/)
 [![Test Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen.svg)](https://github.com/grunnverk/kilde)
@@ -24,10 +24,10 @@ Kilde (Norwegian for "source") is a lightweight, language-agnostic Git automatio
 
 ```bash
 # Install globally
-npm install -g @eldrforge/kilde
+npm install -g @grunnverk/kilde
 
 # Or use with npx
-npx @eldrforge/kilde --version
+npx @grunnverk/kilde --version
 ```
 
 ## Requirements
@@ -193,7 +193,7 @@ Add to your MCP configuration (e.g., `claude_desktop_config.json`):
   "mcpServers": {
     "kilde": {
       "command": "npx",
-      "args": ["-y", "@eldrforge/kilde", "mcp"]
+      "args": ["-y", "@grunnverk/kilde", "mcp"]
     }
   }
 }
@@ -429,16 +429,16 @@ Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and submit
 ## Related Projects
 
 - [kodrdriv](https://github.com/grunnverk/kodrdriv) - Full-featured GitHub automation tool
-- [@eldrforge/commands-git](https://github.com/grunnverk/commands-git) - Reusable git command library
-- [@eldrforge/ai-service](https://github.com/grunnverk/ai-service) - AI service library
+- [@grunnverk/commands-git](https://github.com/grunnverk/commands-git) - Reusable git command library
+- [@grunnverk/ai-service](https://github.com/grunnverk/ai-service) - AI service library
 
 ## Links
 
 - [GitHub Repository](https://github.com/grunnverk/kilde)
-- [npm Package](https://www.npmjs.com/package/@eldrforge/kilde)
+- [npm Package](https://www.npmjs.com/package/@grunnverk/kilde)
 - [AI Integration Guide](docs/AI_GUIDE.md)
 - [API Documentation](docs/API.md)
 
 ---
 
-**Made with ❤️ by the Eldrforge team**
+**Made with ❤️ by the grunnverk team**

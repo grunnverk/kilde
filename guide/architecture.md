@@ -4,7 +4,7 @@ Technical overview of Kilde's implementation, design decisions, and internal arc
 
 ## Overview
 
-Kilde is a TypeScript-based CLI tool and MCP server built on the @eldrforge package ecosystem. It follows a modular architecture with clear separation of concerns and minimal dependencies.
+Kilde is a TypeScript-based CLI tool and MCP server built on the @grunnverk package ecosystem. It follows a modular architecture with clear separation of concerns and minimal dependencies.
 
 ## System Architecture
 
@@ -152,7 +152,7 @@ export async function loadConfig(cliOptions: any): Promise<Config> {
 - YAML as primary format (more human-readable)
 - Deep merge allows partial overrides
 - No validation errors for unknown fields (forward compatibility)
-- Config from @eldrforge/core provides base types
+- Config from @grunnverk/core provides base types
 
 ### Logging System (`src/logging.ts`)
 
@@ -198,7 +198,7 @@ export function createLogger(options: LoggerOptions): Logger {
 
 ### Commit Command
 
-Delegates to `@eldrforge/commands-git` for implementation.
+Delegates to `@grunnverk/commands-git` for implementation.
 
 **Flow**:
 1. Load configuration
@@ -212,14 +212,14 @@ Delegates to `@eldrforge/commands-git` for implementation.
 
 **Integration**:
 ```typescript
-import { commitCommand } from '@eldrforge/commands-git';
+import { commitCommand } from '@grunnverk/commands-git';
 
 // Kilde delegates to shared implementation
 await commitCommand(config);
 ```
 
 **Design Decisions**:
-- Reuse @eldrforge/commands-git (no duplication)
+- Reuse @grunnverk/commands-git (no duplication)
 - Kilde provides configuration layer only
 - All logic in shared package
 
@@ -424,27 +424,27 @@ export async function getPrompt(
 
 ### Core Dependencies
 
-#### `@eldrforge/commands-git`
+#### `@grunnverk/commands-git`
 Provides `commitCommand` implementation.
 
 **Why**: Shared commit logic across tools
 
-#### `@eldrforge/core`
+#### `@grunnverk/core`
 Core types (Config, ReleaseConfig, etc.) and utilities.
 
 **Why**: Consistent types across ecosystem
 
-#### `@eldrforge/ai-service`
+#### `@grunnverk/ai-service`
 AI model integration (OpenAI, Anthropic).
 
 **Why**: Shared AI client with rate limiting, retries
 
-#### `@eldrforge/git-tools`
+#### `@grunnverk/git-tools`
 Git operations (status, diff, log, etc.).
 
 **Why**: Consistent git command execution
 
-#### `@eldrforge/shared`
+#### `@grunnverk/shared`
 Shared utilities (logging, formatting, etc.).
 
 **Why**: Common functionality across packages
@@ -588,18 +588,18 @@ export default defineConfig({
 - Vitest for speed and modern features
 - V8 coverage for accuracy
 - Exclude integration tests (require git repo)
-- Mock external dependencies (@eldrforge packages)
+- Mock external dependencies (@grunnverk packages)
 
 ### Mocking Strategy
 
 Mock external dependencies for unit tests:
 
 ```typescript
-vi.mock('@eldrforge/commands-git', () => ({
+vi.mock('@grunnverk/commands-git', () => ({
     commitCommand: vi.fn()
 }));
 
-vi.mock('@eldrforge/git-tools', () => ({
+vi.mock('@grunnverk/git-tools', () => ({
     getGitStatus: vi.fn(),
     getGitDiff: vi.fn()
 }));
@@ -611,10 +611,10 @@ vi.mock('@eldrforge/git-tools', () => ({
 
 ### Type Alignment
 
-Kilde aligns with @eldrforge/core types:
+Kilde aligns with @grunnverk/core types:
 
 ```typescript
-import { Config, ReleaseConfig } from '@eldrforge/core';
+import { Config, ReleaseConfig } from '@grunnverk/core';
 
 // Use core types throughout
 export async function releaseCommand(config: Config): Promise<void> {
@@ -709,7 +709,7 @@ try {
 Two commands, clear purpose, minimal options.
 
 ### 2. Reusability
-Leverage @eldrforge ecosystem, avoid duplication.
+Leverage @grunnverk ecosystem, avoid duplication.
 
 ### 3. Flexibility
 Configuration-driven behavior, CLI overrides.

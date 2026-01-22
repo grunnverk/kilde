@@ -31,7 +31,7 @@ The MCP server runs as a separate process and communicates with AI assistants vi
 ### Prerequisites
 
 - Node.js 24.0.0 or higher
-- Kilde installed (`npm install -g @eldrforge/kilde`)
+- Kilde installed (`npm install -g @grunnverk/kilde`)
 - Git repository
 - OpenAI API key set in environment
 
@@ -40,7 +40,7 @@ The MCP server runs as a separate process and communicates with AI assistants vi
 #### Method 1: Global Installation
 
 ```bash
-npm install -g @eldrforge/kilde
+npm install -g @grunnverk/kilde
 ```
 
 Then reference `kilde-mcp` in your MCP configuration.
@@ -52,7 +52,7 @@ Use `npx` to run Kilde without global installation:
 ```json
 {
   "command": "npx",
-  "args": ["-y", "@eldrforge/kilde", "mcp"]
+  "args": ["-y", "@grunnverk/kilde", "mcp"]
 }
 ```
 
@@ -75,7 +75,7 @@ Add Kilde to your Claude Desktop MCP configuration file:
   "mcpServers": {
     "kilde": {
       "command": "npx",
-      "args": ["-y", "@eldrforge/kilde", "mcp"],
+      "args": ["-y", "@grunnverk/kilde", "mcp"],
       "env": {
         "OPENAI_API_KEY": "sk-..."
       }
@@ -117,7 +117,7 @@ Add Kilde to your Claude Code MCP settings:
     "servers": {
       "kilde": {
         "command": "npx",
-        "args": ["-y", "@eldrforge/kilde", "mcp"]
+        "args": ["-y", "@grunnverk/kilde", "mcp"]
       }
     }
   }
@@ -528,7 +528,7 @@ I'll generate release notes with a focus on breaking changes.
 
 1. Check that Kilde is installed:
    ```bash
-   npm list -g @eldrforge/kilde
+   npm list -g @grunnverk/kilde
    ```
 
 2. Verify MCP configuration path
