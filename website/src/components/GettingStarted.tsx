@@ -11,7 +11,7 @@ const GettingStarted: React.FC = () => {
                     <h3>Install</h3>
                     <p>Install Kilde globally via npm:</p>
                     <div className="code-block">
-                        <pre>npm install -g @eldrforge/kilde</pre>
+                        <pre>npm install -g @grunnverk/kilde</pre>
                     </div>
                 </div>
 

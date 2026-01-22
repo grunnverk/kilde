@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.npmjs.com/package/@eldrforge/kilde" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.npmjs.com/package/@grunnverk/kilde" target="_blank" rel="noopener noreferrer">
                 npm Package
                             </a>
                         </li>
