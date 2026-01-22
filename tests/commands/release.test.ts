@@ -1,16 +1,16 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { execute } from '../../src/commands/release';
-import { Config, Log, Diff } from '@eldrforge/core';
-import * as GitTools from '@eldrforge/git-tools';
+import { Config, Log, Diff } from '@grunnverk/core';
+import * as GitTools from '@grunnverk/git-tools';
 
 // Mock dependencies
-vi.mock('@eldrforge/git-tools', () => ({
+vi.mock('@grunnverk/git-tools', () => ({
     getDefaultFromRef: vi.fn(),
     getCurrentBranch: vi.fn(),
 }));
 
-vi.mock('@eldrforge/core', async () => {
-    const actual = await vi.importActual('@eldrforge/core');
+vi.mock('@grunnverk/core', async () => {
+    const actual = await vi.importActual('@grunnverk/core');
     return {
         ...actual,
         Log: {
@@ -22,7 +22,7 @@ vi.mock('@eldrforge/core', async () => {
     };
 });
 
-vi.mock('@eldrforge/ai-service', () => ({
+vi.mock('@grunnverk/ai-service', () => ({
     runAgenticRelease: vi.fn(),
     getDryRunLogger: vi.fn((isDryRun) => ({
         info: vi.fn(),
@@ -32,7 +32,7 @@ vi.mock('@eldrforge/ai-service', () => ({
     })),
 }));
 
-vi.mock('@eldrforge/shared', () => ({
+vi.mock('@grunnverk/shared', () => ({
     createStorage: vi.fn(() => ({
         writeFile: vi.fn(),
         readFile: vi.fn(),
@@ -67,7 +67,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Release v2.0.0',
                 body: 'Release notes content',
@@ -104,7 +104,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Release v2.0.0',
                 body: 'Changes from v1.0.0 to v2.0.0',
@@ -147,7 +147,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Release v2.0.0',
                 body: 'Version 2.0.0 release notes',
@@ -187,7 +187,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Release Notes',
                 body: 'Breaking changes highlighted',
@@ -227,7 +227,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Release Notes',
                 body: 'Notes with context',
@@ -266,7 +266,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockResolvedValue({
                 title: 'Preview Release',
                 body: 'Preview content',
@@ -316,7 +316,7 @@ describe('release command integration', () => {
                 files: [],
             } as any);
 
-            const { runAgenticRelease } = await import('@eldrforge/ai-service');
+            const { runAgenticRelease } = await import('@grunnverk/ai-service');
             vi.mocked(runAgenticRelease).mockRejectedValue(new Error('AI service error'));
 
             await expect(execute(mockConfig)).rejects.toThrow();

@@ -1,10 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { executeTool, getTools } from '../../src/mcp/tools';
-import * as CommandsGit from '@eldrforge/commands-git';
+import * as CommandsGit from '@grunnverk/commands-git';
 import * as ReleaseCommand from '../../src/commands/release';
 
 // Mock the dependencies
-vi.mock('@eldrforge/commands-git', () => ({
+vi.mock('@grunnverk/commands-git', () => ({
     commit: vi.fn(),
 }));
 
@@ -12,7 +12,7 @@ vi.mock('../../src/commands/release', () => ({
     execute: vi.fn(),
 }));
 
-vi.mock('@eldrforge/shared', () => ({
+vi.mock('@grunnverk/shared', () => ({
     createStorage: vi.fn(() => ({
         writeFile: vi.fn(),
         readFile: vi.fn(),
