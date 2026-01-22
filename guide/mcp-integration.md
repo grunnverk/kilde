@@ -43,7 +43,7 @@ Any application using the MCP SDK can connect to Kilde's server.
 
 2. **Kilde**: Install globally
    ```bash
-   npm install -g @eldrforge/kilde
+   npm install -g @grunnverk/kilde
    ```
 
 3. **AI Assistant**: Install Claude Desktop or Claude Code

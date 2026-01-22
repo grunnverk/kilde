@@ -4,7 +4,7 @@
  * Provides access to configuration and status information
  */
 
-import { createStorage } from '@eldrforge/shared';
+import { createStorage } from '@grunnverk/shared';
 import { getEffectiveConfig } from '../utils/config';
 import { execSync } from 'child_process';
 

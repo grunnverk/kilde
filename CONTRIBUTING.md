@@ -176,7 +176,7 @@ import { Command } from 'commander';
 import winston from 'winston';
 
 // Internal imports second
-import { Config } from '@eldrforge/core';
+import { Config } from '@grunnverk/core';
 import { getLogger } from './logging';
 
 // Relative imports last
@@ -421,7 +421,7 @@ We follow [Semantic Versioning](https://semver.org/):
 
 - [GitHub Discussions](https://github.com/grunnverk/kilde/discussions)
 - [GitHub Issues](https://github.com/grunnverk/kilde/issues)
-- [Discord Community](https://discord.gg/eldrforge) (coming soon)
+- [Discord Community](https://discord.gg/grunnverk) (coming soon)
 
 ## Recognition
 

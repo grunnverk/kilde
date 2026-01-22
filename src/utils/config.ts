@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import yaml from 'js-yaml';
 import { getLogger } from '../logging';
-import { Config } from '@eldrforge/core';
+import { Config } from '@grunnverk/core';
 import { KILDE_DEFAULTS } from '../constants';
 
 const CONFIG_FILES = [

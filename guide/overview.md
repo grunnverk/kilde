@@ -77,13 +77,13 @@ kilde release 1.0.0 --focus "security,performance"
 ## Architecture
 
 ### Package Structure
-Kilde is built on the @eldrforge package ecosystem, reusing battle-tested components:
+Kilde is built on the @grunnverk package ecosystem, reusing battle-tested components:
 
-- **@eldrforge/commands-git**: Core git commit functionality
-- **@eldrforge/core**: Shared types and utilities
-- **@eldrforge/ai-service**: AI model integration
-- **@eldrforge/git-tools**: Git operations and utilities
-- **@eldrforge/shared**: Common functionality
+- **@grunnverk/commands-git**: Core git commit functionality
+- **@grunnverk/core**: Shared types and utilities
+- **@grunnverk/ai-service**: AI model integration
+- **@grunnverk/git-tools**: Git operations and utilities
+- **@grunnverk/shared**: Common functionality
 
 This architecture ensures:
 - Zero code duplication
@@ -164,7 +164,7 @@ Kilde augments your workflow without replacing it:
 
 1. **Install Kilde**
    ```bash
-   npm install -g @eldrforge/kilde
+   npm install -g @grunnverk/kilde
    ```
 
 2. **Generate your first commit**

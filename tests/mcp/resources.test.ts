@@ -7,7 +7,7 @@ vi.mock('child_process', () => ({
     execSync: vi.fn(),
 }));
 
-vi.mock('@eldrforge/shared', () => ({
+vi.mock('@grunnverk/shared', () => ({
     createStorage: vi.fn(() => ({
         exists: vi.fn(),
         readFile: vi.fn(),

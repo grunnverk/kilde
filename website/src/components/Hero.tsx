@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 <div className="hero-actions">
-                    <a href="https://www.npmjs.com/package/@eldrforge/kilde" className="button">
+                    <a href="https://www.npmjs.com/package/@grunnverk/kilde" className="button">
             Get Started
                     </a>
                     <a href="https://github.com/grunnverk/kilde" className="button button-secondary">
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
 
                 <div className="hero-install">
                     <div className="code-block">
-                        <pre>npm install -g @eldrforge/kilde</pre>
+                        <pre>npm install -g @grunnverk/kilde</pre>
                     </div>
                 </div>
             </div>

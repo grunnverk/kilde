@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import * as CommandsGit from '@eldrforge/commands-git';
-import { Config } from '@eldrforge/core';
+import * as CommandsGit from '@grunnverk/commands-git';
+import { Config } from '@grunnverk/core';
 
 // Mock the commands-git module
-vi.mock('@eldrforge/commands-git', () => ({
+vi.mock('@grunnverk/commands-git', () => ({
     commit: vi.fn(),
 }));
 
