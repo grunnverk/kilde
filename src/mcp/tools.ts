@@ -4,11 +4,11 @@
  * Exposes commit and release commands as MCP tools
  */
 
-import * as CommandsGit from '@eldrforge/commands-git';
+import * as CommandsGit from '@grunnverk/commands-git';
 import * as ReleaseCommand from '../commands/release';
-import { Config } from '@eldrforge/core';
+import { Config } from '@grunnverk/core';
 import { getLogger } from '../logging';
-import { createStorage } from '@eldrforge/shared';
+import { createStorage } from '@grunnverk/shared';
 import { DEFAULT_CONFIG_DIR } from '../constants';
 
 export interface ToolContext {

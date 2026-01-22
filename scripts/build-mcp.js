@@ -63,7 +63,7 @@ async function buildMCPServer() {
             outfile: resolve(root, 'dist/mcp-server.js'),
             external: [
                 '@modelcontextprotocol/*',
-                '@eldrforge/*',
+                '@grunnverk/*',
                 '@riotprompt/*',
                 // Winston and its dependencies use dynamic requires that don't work when bundled
                 // These must be external dependencies, not bundled

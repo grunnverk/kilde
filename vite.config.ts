@@ -74,12 +74,12 @@ export default defineConfig({
         rollupOptions: {
             external: [
                 // Command packages
-                '@eldrforge/core',
-                '@eldrforge/commands-git',
+                '@grunnverk/core',
+                '@grunnverk/commands-git',
                 // Foundation packages
-                '@eldrforge/ai-service',
-                '@eldrforge/git-tools',
-                '@eldrforge/shared',
+                '@grunnverk/ai-service',
+                '@grunnverk/git-tools',
+                '@grunnverk/shared',
                 // MCP dependencies
                 '@modelcontextprotocol/sdk',
             ],

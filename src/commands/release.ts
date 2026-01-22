@@ -8,7 +8,7 @@
  */
 import 'dotenv/config';
 import type { ChatCompletionMessageParam } from 'openai/resources';
-import { getDefaultFromRef, getCurrentBranch } from '@eldrforge/git-tools';
+import { getDefaultFromRef, getCurrentBranch } from '@grunnverk/git-tools';
 import { Formatter, Model } from '@riotprompt/riotprompt';
 import {
     Config,
@@ -31,7 +31,7 @@ import {
     ReleaseSummary,
     filterContent,
     type LLMImprovementConfig,
-} from '@eldrforge/core';
+} from '@grunnverk/core';
 import {
     createCompletionWithRetry,
     getUserChoice,
@@ -43,8 +43,8 @@ import {
     runAgenticRelease,
     generateReflectionReport,
     createReleasePrompt,
-} from '@eldrforge/ai-service';
-import { createStorage } from '@eldrforge/shared';
+} from '@grunnverk/ai-service';
+import { createStorage } from '@grunnverk/shared';
 
 // Helper function to read context files
 async function readContextFiles(contextFiles: string[] | undefined, logger: any): Promise<string> {

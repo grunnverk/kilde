@@ -2,13 +2,13 @@
 import { config as dotenvConfig } from 'dotenv';
 dotenvConfig({ override: false, debug: false });
 
-import { setLogger as setGitLogger } from '@eldrforge/git-tools';
-import { initializeTemplates } from '@eldrforge/ai-service';
-import { Config } from '@eldrforge/core';
+import { setLogger as setGitLogger } from '@grunnverk/git-tools';
+import { initializeTemplates } from '@grunnverk/ai-service';
+import { Config } from '@grunnverk/core';
 import { Command } from 'commander';
 
 // Import commands
-import * as CommandsGit from '@eldrforge/commands-git';
+import * as CommandsGit from '@grunnverk/commands-git';
 import * as ReleaseCommand from './commands/release';
 
 import {
