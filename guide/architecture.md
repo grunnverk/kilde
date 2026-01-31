@@ -454,7 +454,7 @@ MCP protocol implementation.
 
 **Why**: Standard MCP server implementation
 
-#### `@riotprompt/riotprompt`
+#### `@kjerneverk/riotprompt`
 Prompt formatting for LLMs.
 
 **Why**: Structured prompt generation

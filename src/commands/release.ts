@@ -9,7 +9,7 @@
 import 'dotenv/config';
 import type { ChatCompletionMessageParam } from 'openai/resources';
 import { getDefaultFromRef, getCurrentBranch } from '@grunnverk/git-tools';
-import { Formatter, Model } from '@riotprompt/riotprompt';
+import { Formatter, Model } from '@kjerneverk/riotprompt';
 import {
     Config,
     Log,
