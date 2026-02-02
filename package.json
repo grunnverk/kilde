@@ -1,6 +1,6 @@
 {
   "name": "@grunnverk/kilde",
-  "version": "1.5.10-dev.0",
+  "version": "1.5.10",
   "description": "Universal Git Automation Tool - AI-powered commit and release messages for any git repository",
   "main": "dist/main.js",
   "type": "module",
