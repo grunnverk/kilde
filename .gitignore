@@ -25,3 +25,6 @@ tsconfig.tsbuildinfo
 commit-message-*.txt
 package-lock.json
 .kodrdriv*
+
+# Cloned external repositories
+skogfelt/
